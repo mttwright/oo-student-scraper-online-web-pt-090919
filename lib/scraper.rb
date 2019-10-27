@@ -28,6 +28,8 @@ class Scraper
         student_info[:linkedin] = box.css("a")[0].attributes["href"].value
       elsif box.css("a")[0].attributes["href"].value.include?("github")
         student_info[:github] = box.css("a")[0].attributes["href"].value
+      else
+        student_info[:blog] = 
     end
     
   end
