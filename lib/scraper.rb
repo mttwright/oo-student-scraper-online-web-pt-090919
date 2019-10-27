@@ -23,14 +23,14 @@ class Scraper
     social_container = doc.css("div.main-wrapper")
     
     social_container.css("div.social-icon-container a").each do |box|
-      if box.attributes["href"].value.include?("twitter")
+      if box.attributes("href").value.include?("twitter")
         student_info[:twitter] = box.css("a")[0].attributes["href"].value
-      elsif box.attributes["href"].value.include?("linkedin")
+      elsif box.attributes("href").value.include?("linkedin")
         student_info[:linkedin] = box.css("a")[0].attributes["href"].value
-      elsif box.attributes["href"].value.include?("github")
+      elsif box.attributes("href").value.include?("github")
         student_info[:github] = box.css("a")[0].attributes["href"].value
       else
-        student_info[:blog] = box.attributes["href"].value
+        student_info[:blog] = box.attributes("href").value
       end
     end
     
