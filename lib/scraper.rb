@@ -27,7 +27,7 @@ class Scraper
       elsif box.css("a")[0].attributes["href"].value.include?("linkedin")
         student_info[:linkedin] = box.css("a")[0].attributes["href"].value
       elsif box.css("a")[0].attributes["href"].value.include?("github")
-        
+        student_info[:github] = box.css("a")[0].attributes["href"].value
     end
     
   end
