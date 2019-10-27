@@ -38,6 +38,7 @@ class Scraper
     student_info[:bio] = social_container.css("div.description-holder p").text
     
     student_info
+    binding.pry
     
   end
 
