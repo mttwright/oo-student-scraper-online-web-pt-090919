@@ -34,7 +34,8 @@ class Scraper
       end
     end
     
-    student_info[:profile_quote] = social_container.css("div.")
+    student_info[:profile_quote] = social_container.css("div.profile_quote").text
+    binding.pry
     
   end
 
